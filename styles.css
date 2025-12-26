@@ -1,0 +1,89 @@
+/* Basic reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-image: url(shivam.jpg);
+    font-size: 2em;
+}
+
+.logo {
+    margin-right: 0px;
+    `1 q-`
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    im
+}
+
+a {
+    text-decoration: none;
+    color: #fcf2f2;
+    font-size: 4em;
+    align-content: center;
+}
+
+.product-list,
+.cart-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 800px;
+    margin: 40px;
+    align-self: center;
+    background-color: aliceblue;
+    border-radius: 40px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    padding: 8px 12px;
+    background-color: #28a745;
+    border: none;
+    color: rgb(226, 219, 219);
+    font-size: 1em;
+    cursor: pointer;
+    margin-top: 10px;
+    height: 80px;
+    width: 160px;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.cart-list {
+    flex-direction: column;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.total {
+    margin-top: 20px;
+    font-size: 1.2em;
+}

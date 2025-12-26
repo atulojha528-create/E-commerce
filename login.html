@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #333;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        
+        .login-box {
+            width: 350px;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            color: #333;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .input-box {
+            margin-bottom: 20px;
+        }
+        
+        .input-box input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #777;
+            border-radius: 8px;
+            outline: none;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #1e90ff;
+            color: #fff;
+            border: none;
+            font-size: 17px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: #0d6fd1;
+        }
+        
+        #error {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login-box">
+        <h2>Gmail Login</h2>
+
+        <form id="loginForm">
+            <div class="input-box">
+                <input type="text" id="username" required placeholder="Enter Gmail ID">
+            </div>
+
+            <div class="input-box">
+                <input type="password" id="password" required placeholder="Enter Password">
+            </div>
+
+            <button class="btn" type="submit">Login</button>
+            <p id="error"></p>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById("username").value;
+            const errorMsg = document.getElementById("error");
+
+            const gmailPattern = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+
+            if (!gmailPattern.test(email)) {
+                errorMsg.textContent = "Please enter a valid Gmail ID";
+                return;
+            }
+
+            errorMsg.style.color = "green";
+            errorMsg.textContent = "Login Successful!";
+
+            setTimeout(() => {
+                alert("Logged in with Gmail!");
+            }, 500);
+        });
+    </script>
+
+</body>
+
+</html>
